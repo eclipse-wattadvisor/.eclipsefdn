@@ -15,9 +15,6 @@ orgs.newOrg('eclipse-wattadvisor') {
       delete_branch_on_merge: false,
       description: "WattAdvisor website",
       web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "write",
-      },
     },
   ],
 }
