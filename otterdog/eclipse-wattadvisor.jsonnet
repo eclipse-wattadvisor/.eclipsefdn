@@ -15,5 +15,12 @@ orgs.newOrg('eclipse-wattadvisor') {
       description: "WattAdvisor website",
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('WattAdvisor') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "WattAdvisor code repo",
+      web_commit_signoff_required: false,
+    }
   ],
 }
