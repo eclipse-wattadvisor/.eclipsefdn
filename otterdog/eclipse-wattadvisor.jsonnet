@@ -22,6 +22,10 @@ orgs.newOrg('eclipse-wattadvisor') {
       description: "WattAdvisor website",
       gh_pages_build_type: "workflow",
       web_commit_signoff_required: false,
+      workflows+: {
+        enabled: true,
+        default_workflow_permissions: "write",
+      },
       environments: [
         orgs.newEnvironment('github-pages') {
           branch_policies+: [
