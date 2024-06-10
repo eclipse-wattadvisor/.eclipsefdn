@@ -14,6 +14,7 @@ orgs.newOrg('eclipse-wattadvisor') {
       delete_branch_on_merge: false,
       description: "Generic and simulative optimization model in combination with data preprocessing that focuses on the determination of cost-minimal sets of energy components.",
       web_commit_signoff_required: false,
+      topics: ["energy", "optimization", "energy-system", "renewable-energy", "economics", "transformation"]
     },
     orgs.newRepo('website') {
       allow_merge_commit: true,
