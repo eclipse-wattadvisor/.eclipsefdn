@@ -12,14 +12,14 @@ orgs.newOrg('eclipse-wattadvisor') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
-      description: "WattAdvisor code repo",
+      description: "Generic and simulative optimization model in combination with data preprocessing that focuses on the determination of cost-minimal sets of energy components.",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('website') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
-      description: "WattAdvisor website",
+      description: "Eclipse WattAdvisor website",
       gh_pages_build_type: "workflow",
       web_commit_signoff_required: false,
       workflows+: {
