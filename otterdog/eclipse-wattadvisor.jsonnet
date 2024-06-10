@@ -8,19 +8,28 @@ orgs.newOrg('eclipse-wattadvisor') {
     web_commit_signoff_required: false,
   },
   _repositories+:: [
-    orgs.newRepo('website') {
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      delete_branch_on_merge: false,
-      description: "WattAdvisor website",
-      web_commit_signoff_required: false,
-    },
     orgs.newRepo('WattAdvisor') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "WattAdvisor code repo",
       web_commit_signoff_required: false,
-    }
+    },
+    orgs.newRepo('website') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "WattAdvisor website",
+      gh_pages_build_type: "workflow",
+      web_commit_signoff_required: false,
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main"
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
+    },
   ],
 }
