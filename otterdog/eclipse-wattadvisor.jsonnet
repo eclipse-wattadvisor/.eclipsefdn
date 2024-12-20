@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-wattadvisor') {
+orgs.newOrg('technology.wattadvisor', 'eclipse-wattadvisor') {
   settings+: {
     description: "",
     name: "WattAdvisor Project",
